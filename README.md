@@ -35,15 +35,19 @@
     Suy ra trunc(x) = 2 (Kiểu dữ liệu double)
     
     Tiếp theo ta có: 
+    
     $$ y = trunc(x) \times d2 = 2 \times 2.19 = 4.38 $$
 
     Cuối cùng ta thu được kết quả:
+    
     $$ d1 - y = 5.02 - 4.38 = 0.64 $$
 
     Thật vậy:
+    
     $$ 5.02 = 2 \times 2.19 + 0.64 $$
 
     Từ đó ta thu được:
+    
     $$ 5.02 \equiv 0.64 \mod 2.19 $$
 
 - ### Hàm tính toán toán tử mũ (^):
