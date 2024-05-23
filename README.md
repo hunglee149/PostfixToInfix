@@ -20,6 +20,7 @@
     double calculateDoubleModulo(double d1, double d2)
     {
         return d1 - trunc(d1 / d2) * d2;
+        // Hàm được thực hiện với d2 khác 0
     }
     ```
 
