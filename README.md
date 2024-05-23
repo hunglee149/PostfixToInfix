@@ -74,4 +74,4 @@
 
 ## Cách chạy chương trình:
 
-#### 🔗 Tutorial: [YouTube](https://youtu.be/lsxWlTt65Rs)
+#### 🔗 Tutorial: [YouTube](https://youtu.be/eCj_hMTnydY)
