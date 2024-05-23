@@ -19,12 +19,33 @@
     ```cpp
     double calculateDoubleModulo(double d1, double d2)
     {
-        return d1 - trunc(d1 / d2) * d2;
+        return d1 - floor(d1 / d2)*d2;
         // Hàm được thực hiện với d2 khác 0
     }
     ```
+    ___Giải thích___: Hàm floor(x) được sử dụng với mục đích làm tròn số về giá trị nhỏ hơn hoặc bằng giá trị ban đầu.
 
-    Hàm trunc(x) được sử dụng với mục đích cắt bớt đi phần thập phân của x và trả về kiểu dữ liệu double.
+    ___Lưu ý___: Bài toán này không thể sử dụng hàm trunc(x) (hay được gọi là hàm cắt bớt đi phần thập phân của giá trị) vì không thể áp dụng cho trường hợp d1 hoặc d2 có giá trị âm.
+
+    #### Tổng quát bài toán:
+
+    Giả sử ta có 2 số a, b, ta cần tìm a % b (b khác 0).
+
+    Khi đó:
+
+    $$ a = q \times b + r $$
+
+    $$ \iff r = a - q \times b $$
+
+    Ta quy ước r luôn cùng dấu với b
+
+    Khi đó:
+
+    $$ q = \lfloor \frac{a}{b} \rfloor $$
+
+    Suy ra:
+  
+    $$ r = a - \lfloor \frac{a}{b} \rfloor \times b $$
 
     #### ___Ví dụ___:
 
@@ -32,11 +53,11 @@
 
     $$ x = \frac{d1}{d2} \approx 2.29224 $$
 
-    Suy ra trunc(x) = 2 (Kiểu dữ liệu double)
+    Suy ra floor(x) = 2 (Kiểu dữ liệu double)
     
     Tiếp theo ta có: 
     
-    $$ y = trunc(x) \times d2 = 2 \times 2.19 = 4.38 $$
+    $$ y = floor(x) \times d2 = 2 \times 2.19 = 4.38 $$
 
     Cuối cùng ta thu được kết quả:
     
@@ -46,9 +67,7 @@
     
     $$ 5.02 = 2 \times 2.19 + 0.64 $$
 
-    Từ đó ta thu được:
-    
-    $$ 5.02 \equiv 0.64 \mod 2.19 $$
+    Từ đó ta thu được: 5.02 % 2.19 = 0.64
 
 - ### Hàm tính toán toán tử mũ (^):
     Trong chương trình này, phép toán mũ được sử dụng từ hàm pow trong thư viện "math.h" nên không có hàm mô tả.
